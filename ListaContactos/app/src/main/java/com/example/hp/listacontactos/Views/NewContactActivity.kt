@@ -24,8 +24,8 @@ class NewContactActivity : AppCompatActivity() {
         val name =nameInput.text.toString()
         val phone=phoneInput.text.toString()
         val email=emailInput.text.toString()
-        val contactToAdd= Contact(name,phone,email)
-        if (name=="" || phone==""||email==""){
+        val contactToAdd= Contact(phone,name,email)
+        if (name!="" || phone!=""|| email!=""){
             MyApplication.Contacts.add(contactToAdd)
             Toast.makeText(applicationContext,"Se ha agregado el contacto de manera exitosa",Toast.LENGTH_SHORT).show()
         }

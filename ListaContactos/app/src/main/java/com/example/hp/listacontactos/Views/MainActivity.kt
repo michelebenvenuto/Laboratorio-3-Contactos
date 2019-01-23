@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.example.hp.listacontactos.MyApplication
 import com.example.hp.listacontactos.R
@@ -18,6 +19,15 @@ class MainActivity : AppCompatActivity() {
         val contacts = MyApplication.Contacts
         val adapter= ArrayAdapter(this, android.R.layout.simple_list_item_1,contacts)
         ContactView.adapter= adapter
+
+        ContactView.onItemClickListener= object: AdapterView.OnItemClickListener{
+            override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                val intent: Intent = Intent(this@MainActivity, ContactInfoActivity::class.java)
+                val itemToGet=position
+                intent.putExtra("itemToGet",itemToGet)
+                startActivity(intent)
+            }
+        }
 
     }
     fun showNewContactActivity(view: View){
