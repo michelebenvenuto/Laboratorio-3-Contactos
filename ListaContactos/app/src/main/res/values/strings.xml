@@ -7,4 +7,7 @@
     <string name="email_input">Email</string>
     <string name="return_button">Regresar</string>
     <string name="add_button">Agregar</string>
+    <string name="name_title">Nombre</string>
+    <string name="phone_title">Telefono</string>
+    <string name="email_title">Email</string>
 </resources>
