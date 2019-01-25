@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".Views.ContactInfoActivity">
         </activity>
+        <activity android:name=".Views.MailActivity">
+        </activity>
     </application>
 
 </manifest>

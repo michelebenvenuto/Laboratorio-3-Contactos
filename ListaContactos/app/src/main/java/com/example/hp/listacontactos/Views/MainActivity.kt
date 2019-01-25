@@ -3,6 +3,7 @@ package com.example.hp.listacontactos.Views
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.INotificationSideChannel
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -34,4 +35,5 @@ class MainActivity : AppCompatActivity() {
         val intent:Intent=Intent(this,NewContactActivity::class.java)
         startActivity(intent)
     }
+
 }
